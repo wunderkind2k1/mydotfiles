@@ -1,9 +1,9 @@
 #exports
-export MAVEN_HOME=/Users/n2122141/Applications/apache-maven-3.3.9
-export DOCKER_STUFF=/Users/n2122141/projects/dockerstuff/
-export SCRIPTS=/Users/n2122141/projects/scripts
+export MAVEN_HOME=
+export DOCKER_STUFF=
+export SCRIPTS=
 export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS
-export GOPATH="/Users/n2122141/go"
+export GOPATH=
 
 #aliase
 alias s='git status'
