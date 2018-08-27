@@ -6,6 +6,8 @@ export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS
 export GOPATH=
 
 #aliase
+
+#git
 alias s='git status'
 alias gl='git log --graph --pretty=format:"%C(auto)%h%<(3)%d %s %C(bold blue)(%cr, %an)%Creset" --abbrev-commit --all'
 alias ll='git log --graph --pretty=format:"%C(auto)%h%<(3)%d %s %C(bold blue)(%cr, %an)%Creset%n" --abbrev-commit --all --find-copies -M --stat'
@@ -22,7 +24,13 @@ alias ss='git stash save $1'
 alias sl='git stash list'
 alias sp='git stash pop $1'
 alias m='git merge $1'
-alias db='docker_bash.sh $1'
-alias dps="docker ps"
 alias uc='git reset --hard $1'
 alias fp='git fetch;git pull'
+
+#docker
+alias db='docker_bash.sh $1' #needs docker bash script
+alias dps="docker ps"
+alias dcl='docker container ls'
+alias dcla='docker container ls -a'
+alias dil='docker image ls'
+alias dila='docker image ls -a'
