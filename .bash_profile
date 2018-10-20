@@ -2,9 +2,9 @@
 export MAVEN_HOME=
 export DOCKER_STUFF=
 export SCRIPTS=
-export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS
-export GOPATH=
-
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/go 
+export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$GOROOT/bin
 #aliase
 
 #git
@@ -26,6 +26,8 @@ alias sp='git stash pop $1'
 alias m='git merge $1'
 alias uc='git reset --hard $1'
 alias fp='git fetch;git pull'
+alias fu='git fetch upstream'
+alias mu='git merge upstream/master'
 
 #docker
 alias db='docker_bash.sh $1' #needs docker bash script
