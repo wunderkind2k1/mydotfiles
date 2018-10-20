@@ -29,8 +29,10 @@ alias fp='git fetch;git pull'
 
 #docker
 alias db='docker_bash.sh $1' #needs docker bash script
-alias dps="docker ps"
+alias dps='docker ps'
 alias dcl='docker container ls'
 alias dcla='docker container ls -a'
+alias dcs='docker container start $1'
+alias dcst='docker container stop  $1'
 alias dil='docker image ls'
-alias dila='docker image ls -a'
+alias dila='docker image ls -a
