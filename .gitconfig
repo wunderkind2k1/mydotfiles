@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Sven Hohlfeld
+	email = sho1975@gmail.com
+	signingkey = 53B99ACD4EA91ED9866F61827ABED08302AFE36F
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	editor = /usr/bin/vim
