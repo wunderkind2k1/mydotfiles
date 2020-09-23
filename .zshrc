@@ -4,8 +4,10 @@ export MAVEN_HOME=
 export DOCKER_STUFF=
 export SCRIPTS=
 export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME/go 
-export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$GOROOT/bin
+export GOPATH=$HOME/go
+export AWSCLIPATH=$HOME/aws-cli
+export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$GOROOT/bin:$AWSCLIPATH
+#gpg git support
 export GPG_TTY=$(tty)
 #aliase
 
