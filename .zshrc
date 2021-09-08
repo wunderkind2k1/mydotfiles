@@ -20,10 +20,12 @@ alias co='git checkout $1'
 alias a='git add $1'
 alias aa='git add -A'
 alias c='git commit -m $1'
+alias cs='git commit -S -m $1'
+alias csm='git commit -S'
 alias bl='git branch -l'
 alias bc='git checkout -b $1'
 alias bd='git branch -D $1'
-alias po='git push origin'
+alias po='git push origin --follow-tags'
 alias pb='git push origin $1'
 alias ss='git stash save $1'
 alias sl='git stash list'
@@ -33,6 +35,7 @@ alias uc='git reset --hard $1'
 alias fp='git fetch;git pull'
 alias fu='git fetch upstream'
 alias mu='git merge upstream/master'
+alias suo='git push --set-upstream origin $(git branch --show-current)'
 
 #docker
 alias db='docker_bash.sh $1' #needs docker bash script
@@ -43,6 +46,9 @@ alias dcs='docker container start $1'
 alias dcst='docker container stop  $1'
 alias dil='docker image ls'
 alias dila='docker image ls -a'
+
+#go
+alias gta='go test ./...' #run all tests in file hierachy
 
 function powerline_precmd() {
     PS1="$($GOPATH/bin/powerline-go -mode 'compatible' -error $? -shell zsh)"
