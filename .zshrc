@@ -55,6 +55,7 @@ alias dil='docker image ls'
 alias dila='docker image ls -a'
 
 #go
+alias go=go1.18 #point to the version of your choice https://go.dev/doc/manage-install
 alias gta='go test ./...' #run all tests in file hierachy
 
 # The next line updates PATH for the Google Cloud SDK.
