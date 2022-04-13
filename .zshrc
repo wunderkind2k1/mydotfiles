@@ -10,10 +10,10 @@ fi
 export MAVEN_HOME=
 export DOCKER_STUFF=
 export SCRIPTS=
-export GOROOT=/usr/local/opt/go/libexec
+# export GOROOT=/Users/sven/sdk/go1.18 #Needed when running multiple go versions https://go.dev/doc/manage-install
 export GOPATH=$HOME/go
 export AWSCLIPATH=$HOME/aws-cli
-export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$GOROOT/bin:$AWSCLIPATH
+export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$AWSCLIPATH
 #gpg git support
 export GPG_TTY=$(tty)
 #aliase
@@ -55,7 +55,7 @@ alias dil='docker image ls'
 alias dila='docker image ls -a'
 
 #go
-alias go=go1.18 #point to the version of your choice https://go.dev/doc/manage-install
+# alias go=go1.18 #point to the version of your choice https://go.dev/doc/manage-install
 alias gta='go test ./...' #run all tests in file hierachy
 
 # The next line updates PATH for the Google Cloud SDK.
