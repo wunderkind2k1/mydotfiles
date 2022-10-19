@@ -13,7 +13,9 @@ export SCRIPTS=
 # export GOROOT=/Users/sven/sdk/go1.18 #Needed when running multiple go versions https://go.dev/doc/manage-install
 export GOPATH=$HOME/go
 export AWSCLIPATH=$HOME/aws-cli
-export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$AWSCLIPATH
+export FLUTTER_SDK_BIN_PATH=$HOME/projects/flutter-sdk/flutter-3.3.4/bin
+export HOME_BIN=$HOME/bin
+export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATiH/bin:$AWSCLIPATH:$FLUTTER_SDK_BIN_PATH:$HOME_BIN
 #gpg git support
 export GPG_TTY=$(tty)
 #aliase
@@ -43,7 +45,6 @@ alias fp='git fetch;git pull'
 alias fu='git fetch upstream'
 alias mu='git merge upstream/master'
 alias suo='git push --set-upstream origin $(git branch --show-current)'
-
 #docker
 alias db='docker_bash.sh $1' #needs docker bash script
 alias dps='docker ps'
@@ -53,10 +54,11 @@ alias dcs='docker container start $1'
 alias dcst='docker container stop  $1'
 alias dil='docker image ls'
 alias dila='docker image ls -a'
-
 #go
 # alias go=go1.18 #point to the version of your choice https://go.dev/doc/manage-install
 alias gta='go test ./...' #run all tests in file hierachy
+#taskwarrior/taskwarrior-tui
+alias tt=taskwarrior-tui
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/sven/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sven/google-cloud-sdk/path.zsh.inc'; fi
@@ -68,3 +70,6 @@ source ~/projects/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/mc mc
