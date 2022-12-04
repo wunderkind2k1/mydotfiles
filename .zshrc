@@ -15,7 +15,7 @@ export GOPATH=$HOME/go
 export AWSCLIPATH=$HOME/aws-cli
 export FLUTTER_SDK_BIN_PATH=$HOME/projects/flutter-sdk/flutter-3.3.4/bin
 export HOME_BIN=$HOME/bin
-export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATiH/bin:$AWSCLIPATH:$FLUTTER_SDK_BIN_PATH:$HOME_BIN
+export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$AWSCLIPATH:$FLUTTER_SDK_BIN_PATH:$HOME_BIN
 #gpg git support
 export GPG_TTY=$(tty)
 #aliase
