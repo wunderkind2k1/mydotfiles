@@ -15,11 +15,11 @@ export GOPATH=$HOME/go
 export AWSCLIPATH=$HOME/aws-cli
 export FLUTTER_SDK_BIN_PATH=$HOME/projects/flutter-sdk/flutter-3.3.4/bin
 export HOME_BIN=$HOME/bin
-export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$AWSCLIPATH:$FLUTTER_SDK_BIN_PATH:$HOME_BIN
+export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$AWSCLIPATH:$FLUTTER_SDK_BIN_PATH:$HOME_BIN:$HOME/.cargo/bin
 #gpg git support
 export GPG_TTY=$(tty)
-#aliase
 
+#aliase
 #git
 alias s='git status'
 alias gl='git log --graph --pretty=format:"%C(auto)%h%<(3)%d %s %C(bold blue)(%cr, %an)%Creset" --abbrev-commit --all'
@@ -59,6 +59,10 @@ alias dila='docker image ls -a'
 alias gta='go test ./...' #run all tests in file hierachy
 #taskwarrior/taskwarrior-tui
 alias tt=taskwarrior-tui
+
+#other
+#markdown
+alias g='glow'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/sven/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sven/google-cloud-sdk/path.zsh.inc'; fi
