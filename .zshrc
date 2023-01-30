@@ -34,6 +34,7 @@ alias csm='git commit -S'
 alias bl='git branch -l'
 alias bc='git checkout -b $1'
 alias bd='git branch -D $1'
+alias bm='git branch -m $(git branch --show-current) $1'
 alias po='git push origin --follow-tags'
 alias pb='git push origin $1'
 alias ss='git stash save $1'
@@ -77,3 +78,5 @@ source ~/projects/powerlevel10k/powerlevel10k.zsh-theme
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/mc mc
+
+source /Users/sven/.docker/init-zsh.sh || true # Added by Docker Desktop
