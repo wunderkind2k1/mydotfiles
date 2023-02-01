@@ -60,6 +60,7 @@ alias dila='docker image ls -a'
 alias gta='go test ./...' #run all tests in file hierachy
 #taskwarrior/taskwarrior-tui
 alias tt=taskwarrior-tui
+alias tn='task +next'
 
 #other
 #markdown
