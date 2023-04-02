@@ -25,6 +25,7 @@ alias s='git status'
 alias gl='git log --graph --pretty=format:"%C(auto)%h%<(3)%d %s %C(bold blue)(%cr, %an)%Creset" --abbrev-commit --all'
 alias ll='git log --graph --pretty=format:"%C(auto)%h%<(3)%d %s %C(bold blue)(%cr, %an)%Creset%n" --abbrev-commit --all --find-copies -M --stat'
 alias lb='git log --oneline --graph --pretty'
+alias lss='git log --show-signature'
 alias co='git checkout $1'
 alias a='git add $1'
 alias aa='git add -A'
@@ -43,9 +44,11 @@ alias sp='git stash pop $1'
 alias m='git merge $1'
 alias uc='git reset --hard $1'
 alias fp='git fetch;git pull'
-alias fu='git fetch upstream'
+alias fup='git fetch upstream'
 alias mu='git merge upstream/master'
 alias suo='git push --set-upstream origin $(git branch --show-current)'
+alias fu='git add . && git commit --amend -C HEAD && git push -f'
+
 #docker
 alias db='docker_bash.sh $1' #needs docker bash script
 alias dps='docker ps'
@@ -81,3 +84,7 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/mc mc
 
 source /Users/sven/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/sven/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
