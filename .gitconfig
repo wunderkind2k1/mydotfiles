@@ -1,4 +1,6 @@
 # This is Git's per-user configuration file.
+
+# https://jvns.ca/blog/2024/02/16/popular-git-config-options
 [user]
 # Please adapt and uncomment the following lines:
 	name = Sven Hohlfeld
@@ -13,9 +15,21 @@
 	editor = /usr/bin/vim
 	pager = git-split-diffs --color | less -RFX
 [init]
-	defaultBranch = master
+	defaultBranch = main #master
 [pull]
 	rebase = true
 [rebase]
 	autoStash = true
 [safe]
+
+[help]
+	autocorrect = prompt
+
+[interactive]
+	diffFilter = delta --color-only
+
+[diff]
+	algorithm = histogram
+
+[branch]
+	sort= -committerdate
