@@ -92,3 +92,5 @@ source /Users/sven/.docker/init-zsh.sh || true # Added by Docker Desktop
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/sven/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+complete -o nospace -C /usr/local/bin/terraform terraform
