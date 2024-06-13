@@ -58,6 +58,7 @@ alias dcs='docker container start $1'
 alias dcst='docker container stop  $1'
 alias dil='docker image ls'
 alias dila='docker image ls -a'
+alias dspa='docker system prune -a --volumes'
 #go
 # alias go=go1.18 #point to the version of your choice https://go.dev/doc/manage-install
 alias gta='go test ./...' #run all tests in file hierachy
