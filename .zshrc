@@ -5,8 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-#exports
+# export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+# exports
 export MAVEN_HOME=
 export DOCKER_STUFF=
 export SCRIPTS=
@@ -16,11 +16,14 @@ export AWSCLIPATH=$HOME/aws-cli
 export FLUTTER_SDK_BIN_PATH=$HOME/projects/flutter-sdk/flutter-3.3.4/bin
 export HOME_BIN=$HOME/bin
 export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$AWSCLIPATH:$FLUTTER_SDK_BIN_PATH:$HOME_BIN:$HOME/.cargo/bin
-#gpg git support
+# gpg git support
 export GPG_TTY=$(tty)
+# java 11 (techem)
+export JAVA_HOME="/usr/local/opt/openjdk@11"
+export PATH="/usr/local/opt/openjdk@11/bin":$PATH
 
-#aliase
-#git
+# aliases
+# git
 alias s='git status'
 alias gl='git log --graph --pretty=format:"%C(auto)%h%<(3)%d %s %C(bold blue)(%cr, %an)%Creset" --abbrev-commit --all'
 alias ll='git log --graph --pretty=format:"%C(auto)%h%<(3)%d %s %C(bold blue)(%cr, %an)%Creset%n" --abbrev-commit --all --find-copies -M --stat'
@@ -41,6 +44,7 @@ alias pb='git push origin $1'
 alias ss='git stash save $1'
 alias sl='git stash list'
 alias sp='git stash pop $1'
+alias gsa='git stash apply $1'
 alias m='git merge $1'
 alias uc='git reset --hard $1'
 alias fp='git fetch;git pull'
@@ -49,7 +53,7 @@ alias mu='git merge upstream/master'
 alias suo='git push --set-upstream origin $(git branch --show-current)'
 alias fu='git add . && git commit --amend -C HEAD && git push -f'
 
-#docker
+# docker
 alias db='docker_bash.sh $1' #needs docker bash script
 alias dps='docker ps'
 alias dcl='docker container ls'
@@ -59,15 +63,15 @@ alias dcst='docker container stop  $1'
 alias dil='docker image ls'
 alias dila='docker image ls -a'
 alias dspa='docker system prune -a --volumes'
-#go
+# go
 # alias go=go1.18 #point to the version of your choice https://go.dev/doc/manage-install
 alias gta='go test ./...' #run all tests in file hierachy
-#taskwarrior/taskwarrior-tui
+# taskwarrior/taskwarrior-tui
 alias tt=taskwarrior-tui
 alias tn='task +next'
 
-#other
-#markdown
+# other
+# markdown
 alias g='glow'
 
 # The next line updates PATH for the Google Cloud SDK.
