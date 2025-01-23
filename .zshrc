@@ -18,9 +18,16 @@ export HOME_BIN=$HOME/bin
 export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$AWSCLIPATH:$FLUTTER_SDK_BIN_PATH:$HOME_BIN:$HOME/.cargo/bin
 # gpg git support
 export GPG_TTY=$(tty)
+
 # java 11 (techem)
-export JAVA_HOME="/usr/local/opt/openjdk@11"
-export PATH="/usr/local/opt/openjdk@11/bin":$PATH
+# export JAVA_HOME="/usr/local/opt/openjdk@11"
+# export PATH="/usr/local/opt/openjdk@11/bin":$PATH
+
+# java 17 (techem)
+export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
+export PATH="/opt/homebrew/opt/openjdk@17/bin":$PATH
+
+# aliases
 
 # aliases
 # git
@@ -88,31 +95,10 @@ source ~/projects/powerlevel10k/powerlevel10k.zsh-theme
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/mc mc
 
 source /Users/sven/.docker/init-zsh.sh || true # Added by Docker Desktop
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/sven/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-# buildpacks pack tool
-. $(pack completion --shell zsh)
