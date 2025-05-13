@@ -24,8 +24,8 @@ export GPG_TTY=$(tty)
 # export PATH="/usr/local/opt/openjdk@11/bin":$PATH
 
 # java 17 (techem)
-export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
-export PATH="/opt/homebrew/opt/openjdk@17/bin":$PATH
+export JAVA_HOME="/opt/homebrew/Cellar/openjdk@17/17.0.15/libexec/openjdk.jdk/Contents/Home"
+export PATH="$JAVA_HOME/bin":$PATH
 
 # aliases
 
@@ -101,4 +101,23 @@ complete -o nospace -C /usr/local/bin/mc mc
 source /Users/sven/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+
+# Added by Windsurf
+export PATH="/Users/sven/.codeium/windsurf/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
