@@ -5,7 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 # exports
 export MAVEN_HOME=
 export DOCKER_STUFF=
@@ -18,10 +17,6 @@ export HOME_BIN=$HOME/bin
 export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$AWSCLIPATH:$FLUTTER_SDK_BIN_PATH:$HOME_BIN:$HOME/.cargo/bin
 # gpg git support
 export GPG_TTY=$(tty)
-
-# java 11 (techem)
-# export JAVA_HOME="/usr/local/opt/openjdk@11"
-# export PATH="/usr/local/opt/openjdk@11/bin":$PATH
 
 # java 17 (techem)
 export JAVA_HOME="/opt/homebrew/Cellar/openjdk@17/17.0.15/libexec/openjdk.jdk/Contents/Home"
@@ -103,9 +98,6 @@ source /Users/sven/.docker/init-zsh.sh || true # Added by Docker Desktop
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 
-# Added by Windsurf
-export PATH="/Users/sven/.codeium/windsurf/bin:$PATH"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -121,3 +113,18 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+
+
+# cli pomodoro. source: https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106 
+# Requires https://github.com/caarlos0/timer to be installed
+# brew install caarlos0/tap/timer
+
+# Mac setup for pomo
+alias work="timer 60m && terminal-notifier -message 'Pomodoro'\
+        -title 'Work Timer is up! Take a Break 😊'\
+        -sound Crystal"
+        
+alias rest="timer 1m && terminal-notifier -message 'Pomodoro'\
+        -title 'Break is over! Get back to work 😬'\
+        -sound Crystal"
