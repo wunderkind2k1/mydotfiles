@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# fake watch script on mac
-
-while true; do $1; sleep 0.5; clear; done
