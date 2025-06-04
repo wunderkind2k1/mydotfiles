@@ -125,6 +125,6 @@ alias work="timer 60m && terminal-notifier -message 'Pomodoro'\
         -title 'Work Timer is up! Take a Break 😊'\
         -sound Crystal"
         
-alias rest="timer 1m && terminal-notifier -message 'Pomodoro'\
+alias rest="timer 15m && terminal-notifier -message 'Pomodoro'\
         -title 'Break is over! Get back to work 😬'\
         -sound Crystal"
