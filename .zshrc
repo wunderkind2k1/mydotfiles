@@ -77,10 +77,14 @@ alias tn='task +next'
 alias g='glow'
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+#powerlevel10k
 source ~/projects/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+autoload -Uz compinit && compinit
 
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -91,8 +95,6 @@ complete -o nospace -C /usr/local/bin/mc mc
 source /Users/sven/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 complete -o nospace -C /usr/local/bin/terraform terraform
-
-
 
 
 # cli pomodoro. original source: https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106 
@@ -112,4 +114,3 @@ rest() {
     -title 'Break is over! Get back to work 😊' \
     -sound Crystal
 }
- 
