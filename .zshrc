@@ -76,11 +76,6 @@ alias tn='task +next'
 # markdown
 alias g='glow'
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/sven/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sven/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/sven/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sven/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 source ~/projects/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -98,33 +93,23 @@ source /Users/sven/.docker/init-zsh.sh || true # Added by Docker Desktop
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 
-
-
-# cli pomodoro. source: https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106 
+# cli pomodoro. original source: https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106 
 # Requires https://github.com/caarlos0/timer to be installed
 # brew install caarlos0/tap/timer
 
 # Mac setup for pomo
-alias work="timer 60m && terminal-notifier -message 'Pomodoro'\
-        -title 'Work Timer is up! Take a Break 😊'\
-        -sound Crystal"
-        
-alias rest="timer 15m && terminal-notifier -message 'Pomodoro'\
-        -title 'Break is over! Get back to work 😬'\
-        -sound Crystal"
+work() {
+  timer "${1:-60m}" && terminal-notifier -message 'Pomodoro' \
+    -title 'Work Timer is up! Take a Break 😊' \
+    -sound Crystal
+}
+       
+
+rest() {
+  timer "${1:-15m}" && terminal-notifier -message 'Pomodoro' \
+    -title 'Break is over! Get back to work 😊' \
+    -sound Crystal
+}
+ 
