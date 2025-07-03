@@ -55,6 +55,7 @@ alias fup='git fetch upstream'
 alias mu='git merge upstream/master'
 alias suo='git push --set-upstream origin $(git branch --show-current)'
 alias fu='git add . && git commit --amend -C HEAD && git push -f'
+alias tl='cd $(git rev-parse --show-toplevel)'
 
 # docker
 alias db='docker_bash.sh $1' #needs docker bash script
