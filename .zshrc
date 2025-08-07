@@ -73,10 +73,11 @@ alias gta='go test ./...' #run all tests in file hierachy
 # taskwarrior/taskwarrior-tui
 alias tt=taskwarrior-tui
 alias tn='task +next'
-
 # other
 # markdown
 alias g='glow'
+# fabric
+alias fabric='fabric-ai'
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
