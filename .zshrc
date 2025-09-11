@@ -70,6 +70,14 @@ alias dspa='docker system prune -a --volumes'
 # go
 # alias go=go1.18 #point to the version of your choice https://go.dev/doc/manage-install
 alias gta='go test ./...' #run all tests in file hierachy
+alias gmw='go mod why -m $1'
+alias fgd='go list -m all | grep $1' #check which version of a module is used
+alias fgmv='fgmvfun' #check what versions of a module are available
+# needed to make the command work because of shell dragons
+fgmvfun() {
+    go list -m -versions "$1" | tr " " "\n"
+}
+
 # taskwarrior/taskwarrior-tui
 alias tt=taskwarrior-tui
 alias tn='task +next'
