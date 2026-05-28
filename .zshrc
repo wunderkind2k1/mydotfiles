@@ -15,14 +15,15 @@ export AWSCLIPATH=$HOME/aws-cli
 export FLUTTER_SDK_BIN_PATH=$HOME/projects/flutter-sdk/flutter-3.3.4/bin
 export HOME_BIN=$HOME/bin
 export PATH=$PATH:$MAVEN_HOME/bin:$DOCKER_STUFF:$SCRIPTS:$GOPATH/bin:$AWSCLIPATH:$FLUTTER_SDK_BIN_PATH:$HOME_BIN:$HOME/.cargo/bin
+# Added by Antigravity
+export PATH="/Users/sven/.antigravity/antigravity/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/sven/.lmstudio/bin"
+# End of LM Studio CLI section
+
 # gpg git support
 export GPG_TTY=$(tty)
-
-# java 17 (techem)
-export JAVA_HOME="/opt/homebrew/Cellar/openjdk@17/17.0.15/libexec/openjdk.jdk/Contents/Home"
-export PATH="$JAVA_HOME/bin":$PATH
-
-# aliases
 
 # aliases
 # git
@@ -42,6 +43,7 @@ alias bl='git branch -l'
 alias bc='git checkout -b $1'
 alias bd='git branch -D $1'
 alias bm='git branch -m $(git branch --show-current) $1'
+alias bv='git branch -vv'
 alias po='git push origin --follow-tags'
 alias pb='git push origin $1'
 alias ss='git stash save $1'
